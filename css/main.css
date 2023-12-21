@@ -471,7 +471,7 @@ svg {
   border-color: #966df9;
 }
 .input--text input {
-  border-color: #DDDDDD;
+  border-color: #dddddd;
   border-radius: 7px;
   padding: 0.75em 1em;
 }
@@ -504,7 +504,7 @@ svg {
   font-weight: 500;
 }
 .input__group--secondary label {
-  color: #0E0523;
+  color: #0e0523;
   font-weight: 400;
 }
 
@@ -806,7 +806,7 @@ svg {
 }
 
 .example {
-  background: #170f49;
+  background: #333378;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
