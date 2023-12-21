@@ -2,22 +2,31 @@
 
 /* Typography */
 h1 {
-  font-size: 52px;
+  font-size: 50px;
 }
 h2 {
-  font-size: 48px;
+  font-size: 50px;
 }
 h3 {
-  font-size: 34px;
+  font-size: 40px;
 }
 h4 {
-  font-size: 22px;
+  font-size: 34px;
 }
 h5 {
-  font-size: 20px;
+  font-size: 26px;
+  &._sm {
+    font-size: 24px;
+  }
 }
 h6 {
-  font-size: 18px;
+  font-size: 20px;
+  &._lg {
+    font-size: 22px;
+  }
+  &._sm {
+    font-size: 18px;
+  }
 }
 h1,
 h2,
@@ -32,4 +41,7 @@ h6 {
 
 p {
   line-height: 1.8em;
+  &._lg {
+    font-size: 18px;
+  }
 }
