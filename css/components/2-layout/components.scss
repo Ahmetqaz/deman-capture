@@ -18,13 +18,13 @@
 .input {
   display: flex;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
 
   input,
   textarea,
   &__selected {
-    padding: 1.2em 1.9em;
-    border-radius: 1.375em;
+    padding: 0.6em 1.3em;
+    border-radius: 1.57em;
     width: 100%;
     background-color: $white;
     border: 1px solid $white;
@@ -44,6 +44,7 @@
   }
   input:focus,
   textarea:focus {
+    border-color: $primary;
   }
   &--select {
     position: relative;
@@ -142,6 +143,7 @@
     }
   }
   &--button {
+    font-size: 16px;
     input {
       border-radius: 3.75em;
       box-shadow: 0px 8px 25px 0px rgba(13, 10, 44, 0.06);
@@ -153,6 +155,13 @@
       }
     }
   }
+  &--text {
+    input {
+      border-color: $white-5;
+      border-radius: 7px;
+      padding: 0.75em 1em;
+    }
+  }
   &__wrapper {
     position: relative;
     width: 100%;
@@ -162,6 +171,22 @@
       top: 50%;
       transform: translateY(-50%);
       box-shadow: 0px 3px 12px 0px rgba(74, 58, 255, 0.18);
+    }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    label {
+      color: $white;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    &--secondary {
+      label {
+        color: $black-3;
+        font-weight: 400;
+      }
     }
   }
 }
@@ -248,8 +273,24 @@
     &:hover {
       background: rgba($primary, 0.8);
     }
+    &._lg {
+      background: unset;
+      border: unset;
+      width: 1.25em;
+      height: 1.25em;
+      border-color: transparent;
+      .ico {
+        width: 100%;
+        height: 100%;
+      }
+      &:hover {
+        background: transparent;
+        .ico {
+          color: $primary;
+        }
+      }
+    }
   }
-
   &:active {
     opacity: 0.7;
   }
@@ -417,6 +458,13 @@
       }
     }
   }
+}
+.example {
+  background: $blue-dark-2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .badge {
