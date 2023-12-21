@@ -223,6 +223,11 @@
       color: $primary;
     }
   }
+  &--lg {
+    font-size: 18px;
+    padding: 0.86em 1.72em;
+    font-weight: 400;
+  }
   &--shadow {
     background: $white;
     color: $primary;
@@ -244,6 +249,7 @@
       background: rgba($primary, 0.8);
     }
   }
+
   &:active {
     opacity: 0.7;
   }
@@ -308,7 +314,7 @@
     }
   }
 }
-.title {
+.box {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -326,10 +332,90 @@
     font-family: $font-secondary;
     text-transform: capitalize;
   }
+  &--secondary {
+    text-align: left;
+    gap: 10px;
+    h6 {
+      font-family: $font-secondary;
+    }
+    h3 {
+      font-family: $font-secondary;
+    }
+    p {
+      color: $gray-4;
+    }
+  }
 }
 .text {
   &--title {
     font-family: $font-livvic;
+  }
+  &--secondary {
+    font-family: $font-secondary;
+  }
+  &--line {
+    position: relative;
+    padding-left: 32px;
+    color: $primary;
+    &::before {
+      content: "";
+      font-size: inherit;
+      width: 22px;
+      height: 2px;
+      background: $primary;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+    }
+  }
+  &--gradient {
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-family: $font-chivo;
+  color: $gray-3;
+  line-height: 1.2;
+  gap: 10px;
+  &__item {
+    position: relative;
+    padding-left: 14px;
+    &::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $primary;
+    }
+  }
+  &--gradient {
+    .list {
+      &__item {
+        &::before {
+          background: linear-gradient(142deg, #9c61f7 14.84%, #6ee4f6 81.58%);
+        }
+      }
+    }
+  }
+  &--secondary {
+    .list {
+      &__item {
+        &::before {
+          background: $white;
+        }
+      }
+    }
   }
 }
 

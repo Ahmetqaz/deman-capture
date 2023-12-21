@@ -544,6 +544,11 @@ svg {
   border-color: #966df9;
   color: #966df9;
 }
+.button--lg {
+  font-size: 18px;
+  padding: 0.86em 1.72em;
+  font-weight: 400;
+}
 .button--shadow {
   background: #fff;
   color: #966df9;
@@ -648,7 +653,7 @@ svg {
   stroke: currentColor;
 }
 
-.title {
+.box {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,20 +666,95 @@ svg {
   color: #19063b;
   text-align: center;
 }
-.title h3 {
+.box h3 {
   font-family: "Livvic", sans-serif;
 }
-.title h5 {
+.box h5 {
   font-family: "DM Sans", sans-serif;
   text-transform: uppercase;
 }
-.title h6 {
+.box h6 {
   font-family: "DM Sans", sans-serif;
   text-transform: capitalize;
+}
+.box--secondary {
+  text-align: left;
+  gap: 10px;
+}
+.box--secondary h6 {
+  font-family: "DM Sans", sans-serif;
+}
+.box--secondary h3 {
+  font-family: "DM Sans", sans-serif;
+}
+.box--secondary p {
+  color: #808080;
 }
 
 .text--title {
   font-family: "Livvic", sans-serif;
+}
+.text--secondary {
+  font-family: "DM Sans", sans-serif;
+}
+.text--line {
+  position: relative;
+  padding-left: 32px;
+  color: #966df9;
+}
+.text--line::before {
+  content: "";
+  font-size: inherit;
+  width: 22px;
+  height: 2px;
+  background: #966df9;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+}
+.text--gradient {
+  background: linear-gradient(267deg, #6bedf6 10.47%, #9e59f7 97.78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  font-family: "Chivo", sans-serif;
+  color: #525252;
+  line-height: 1.2;
+  gap: 10px;
+}
+.list__item {
+  position: relative;
+  padding-left: 14px;
+}
+.list__item::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #966df9;
+}
+.list--gradient .list__item::before {
+  background: linear-gradient(142deg, #9c61f7 14.84%, #6ee4f6 81.58%);
+}
+.list--secondary .list__item::before {
+  background: #fff;
 }
 
 .badge {
